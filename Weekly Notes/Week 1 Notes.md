@@ -17,6 +17,6 @@ Mridula - In the next implementation, we tried to create one client which backs 
 3. We will establish communication sockets among the peers and will be able to send and receive files over them before the next meeting. For simplicity, these files for now will not be encrypted or encoded.
 
 
-# Link to Trello - 
+## Link to Trello - 
 https://trello.com/b/lABFR50h/os-project
     
