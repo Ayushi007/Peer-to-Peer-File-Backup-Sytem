@@ -14,6 +14,6 @@ We tried understanding and implementing the code for P2P backup system using Bit
 ## Next Week Plans
 We plan to build a basic P2P system from scratch and for that we will design the network and setup nodes in the initial phase. We plan to establish communication sockets among them and send files over them before the next meeting. For simplicity, these files for now will not be encrypted or encoded. 
 
-
+[Link to Trello](https://trello.com/b/lABFR50h/os-project)
 
 
