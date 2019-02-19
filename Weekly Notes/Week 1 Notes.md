@@ -11,6 +11,9 @@ Ayushi - In this implementation, we tried to understand and implement one of the
 ### 3. Attempt 2 - Implement basic Peer-2-Peer backup system in python
 Mridula - In the next implementation, we tried to create one client which backs up the file chunk, and a tracker to keep track of the chunks information and their location. The peers communicate with the tracker requesting the required information. We have created a master node which requests for the chunks and combine them to recreate the complete file. But, in the end we are getting some error in master peer while retrieving the chunks, we are hoping to make it work or may be solve this with a different approach
 
+### 4. Attempt 3 - Basic P2P Distributed backup system in C++
+Anshi - In this implementation, we tried to understand a redundant distributed backup system, with all nodes made out of two components - server and client, but some error was occuring in the code while sending files to more than one peer which we were not able to resolve. We will continue working on this code and try to use this in our further implementations and build on it if possible.
+
 ## This Week Plans
 1. We plan to create peers by creating virtual machines on cloud using google cloud platform or any other available open source software.
 2. Then, similar to file transfer methods used in our previous implementations of this week, we will build P2P system from scratch
