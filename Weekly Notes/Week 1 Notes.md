@@ -12,7 +12,10 @@ Ayushi - In this implementation, we tried to understand and implement one of the
 Mridula - In the next implementation, we tried to create one client which backs up the file chunk, and a tracker to keep track of the chunks information and their location. The peers communicate with the tracker requesting the required information. We have created a master node which requests for the chunks and combine them to recreate the complete file. But, in the end we are getting some error in master peer while retrieving the chunks, we are hoping to make it work or may be solve this with a different approach
 
 ## This Week Plans
-We plan to build a basic P2P system from the scratch and for that we are planning to design the network and setup nodes in the initial phase. We plan to establish communication sockets among them and being able to send and receive files over them before the next meeting. For simplicity, these files for now will not be encrypted or encoded. 
+    1.We plan to create peers by creating virtual machines on cloud using google cloud platform or any other available open source software.
+    2. Then, similar to file transfer methods used in our previous implementations of this week, we will build P2P system from scratch
+    3. We will establish communication sockets among the peers and will be able to send and receive files over them before the next meeting. For simplicity, these files for now will not be encrypted or encoded.
+
 
 # Link to Trello - 
 https://trello.com/b/lABFR50h/os-project
