@@ -10,7 +10,7 @@ host = argv[1]
 TCP_PORT = argv[2]
 TCP_PORT = int(TCP_PORT)
 
-TCP_IP = "127.0.0.1"
+TCP_IP = "10.168.0.2"
 BUFFER_SIZE = 1024
 
 class ClientThread(Thread):
