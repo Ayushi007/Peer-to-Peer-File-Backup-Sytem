@@ -39,7 +39,7 @@ argv = sys.argv
 # Get the server hostname and port as command line arguments
 host = argv[1]
 TCP_PORT = argv[2]
-TCP_IP = "127.0.0.1"
+TCP_IP = "10.168.0.4"
 TCP_PORT = int(TCP_PORT)
 o = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 o.connect((TCP_IP, TCP_PORT))
@@ -57,7 +57,7 @@ BUFFER_SIZE = 1024
 with open('received_chunks', 'wb') as fila:
     print ('file opened')
     #while True:
-    th = Thread(target=download,args=(TCP_IP,8889))
+    th = Thread(target=download,args=("10.168.0.2",8889))
     #th.daemon= True
     th.start()
             #th = Thread(target=download,args=(TCP_IP,8889))
