@@ -3,7 +3,7 @@ from threading import Thread
 from socketserver import ThreadingMixIn
 import json
 
-TCP_IP = '127.0.0.1'
+TCP_IP = '10.168.0.4'
 TCP_PORT = 9001
 BUFFER_SIZE = 1024
 #file_list = {"Chunk1.txt":8887, "chunk2.txt":8888,"chunk3.txt":8889}
