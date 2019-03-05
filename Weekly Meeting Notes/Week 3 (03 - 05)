@@ -1,0 +1,35 @@
+# Week 3 Notes
+
+## Last Week's Updates
+
+### 1. Automated creation of Peer
+Bhargav - We have successfully automated the creation of peers in the network. We have written a python script to get the name of peer from the user and automatically create a gcloud instance. This script also deploys the client application in the instace and notifies the tracker that the peer is added to the network.
+
+### 2. Added a tracker peer to the network
+Bhargav - We have added a tracker peer to the network to keep track of all currently available and connected peers of the network. The tracker gets notified once a new peer is added to the network and it appends the address of new peer to the the peerlist and broadcasts it to other peers to update their respective lists. 
+
+### 3. Created two way communication between client and server
+Mridula - We were able to setup two way communication between client and server using socket communication. This was to test whether it was possible for the server to directly send and receive without any additional resources. However, we were not able to figure out how to do this communication without the presence of the signle server in the network and this is something we need to work on the next week.
+
+### 4. Created two way file transfer script for peers of network
+Anshi and Ayushi - We have successfully setup two way file transfer for peers of the network. We have written a python script to backup, retrieve, get peer information from the tracker and listen to other peers of the network to backup or retrieve their files. The files are divided into chunks before backing up according to the number of peers available for backup and then the chunks are sent to different peers. Each peer maintains a list which stores metadata related to the chunk and the file backed up for later retrieval.
+
+### 5. Tested file transfer script on localhost
+Anshi and Ayushi - We tested the above file transfer code on localhost and found and removed the corner test case errors which we experienced. 
+
+### 6. Explored the File Systems discussed in the project meeting
+Mridula - We also explored FUSE and WebDav file systems suggested by the professor but we decided to expore more on the Python Daemon script because of the below founding.
+1. FUSE - FUSE is the one of the freely available framework for creating userspace file systems for use on Linux computers. The main problem we found that FUSE is not supported by windows and also the main drawback is the performance impact compared to native (kernel) drivers.
+3. WebDav - WebDav is the framework used for the file transfer to the servers over the internet. One of the features of the WebDav is that it locks the files shared and this locking mechanism did not work in the standard File Systems (FS). This could mean that two users could edit the files simultaneously in each. Also, it is highlighted that WebDav is slower than the FS.
+
+### 7. Explored ways to daemonize python script
+Anshi - We also found some ways to daemonize python script, one of which was to make a cron job which calls our script. We are yet to test it on our peer to peer client and tracker code.
+
+
+## This Week's Plans
+
+1. Test our file transfer peer code, tracker code  and automated creation of peer together on the google cloud virtual machine instances.
+2. Daemonize this python script to run in the background for all the peers of the network.
+3. Explore options to create two way file transfer without the centralizated tracker server.
+
+[Link to Trello](https://trello.com/b/lABFR50h/os-project)
