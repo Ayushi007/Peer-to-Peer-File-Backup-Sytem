@@ -1,18 +1,17 @@
 import os
+import math
 
 def divideFile(filename, num_peers):
-    with open(filename, 'rb') as f:
+        f = open(filename, 'r')
         st = os.stat(filename)
         size = st.st_size
-        print(size)
-        while(size % num_peers != 0):
-            num_peers = num_peers -1
-        print(num_peers)
-        read_size = int(size/num_peers)
+        read_size = int(math.ceil(size/num_peers))
+        #print("Ceiled size------",read_size)
         chunk_list = []
-        chunk = str(f.read(read_size),'utf-8')
+        chunk = f.read(read_size)
         while chunk:
+            #print("Chunk---",chunk)
             chunk_list.append(chunk)
-            chunk = str(f.read(read_size),'utf-8')
-    return chunk_list
+            chunk = f.read(read_size)
+        return chunk_list
 
